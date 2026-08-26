@@ -1,0 +1,23 @@
+[project]
+name = "terraform-security-scanner"
+version = "0.1.0"
+description = "Static security scanner for Terraform (.tf) configuration: public S3 buckets, open security groups, RDS misconfigurations, hardcoded secrets."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Kaan Turan" }]
+dependencies = []
+
+[project.scripts]
+terraform-security-scanner = "terraform_security_scanner:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["terraform_security_scanner"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
